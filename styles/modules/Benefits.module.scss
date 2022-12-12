@@ -1,0 +1,148 @@
+@import "../../styles/utils/variables.scss";
+
+.Benefits {
+  display: block;
+  padding: 80px 20px;
+  width: 100%;
+
+  @media (min-width: $desktop) {
+    padding: 100px 0;
+  }
+
+  &__about {
+    width: 100%;
+    margin-bottom: 76px;
+
+    @media (min-width: $desktop) {
+      margin-bottom: 130px;
+    }
+  }
+
+  &__care {
+    width: 100%;
+    margin-bottom: 80px;
+
+    @media (min-width: $desktop) {
+      display: grid;
+      grid-template-areas: 
+      "title photo" 
+      "text  photo"
+      "text  photo"
+      "text  photo";
+      grid-template-columns: 1fr 1fr;
+      column-gap: 33px;
+      margin-bottom: 130px;
+      padding-left: 7%;
+    }
+  }
+
+  &__bonus {
+    width: 100%;
+
+    @media (min-width: $desktop) {
+      display: grid;
+      grid-template-areas: 
+      "photo title" 
+      "photo text"
+      "photo text"
+      "photo text";
+      grid-template-columns: 1fr 1fr;
+      column-gap: 75px;
+      padding-right: 7%;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 40px;
+
+    @media (min-width: $desktop) {
+      text-align: start;
+      padding-left: 7%;
+    }
+  }
+
+  &__title_care {
+    grid-area: title;
+    height: fit-content;
+    padding: 0;
+  }
+  
+  &__title_bonus {
+    grid-area: title;
+    padding-top: 20px;
+
+    @media (min-width: $desktop) {
+      padding-top: 60px;
+    }
+
+  }
+
+  &__photo {
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+
+  &__photo1 {
+    margin-bottom: 40px;
+    height: 224px;
+    background-size: 360px;
+    background-image: url("../../public/img/any/benefits_1.png");
+
+    @media (min-width: $desktop) {
+      background-size: 100%;
+      padding-bottom: 50%;
+      background-image: url("../../public/img/any/benefits_big_1.png");
+    }
+  }
+
+  &__photo2 {
+    margin-bottom: 40px;
+    height: 224px;
+    background-size: 360px;
+    background-image: url("../../public/img/any/benefits_2.png");
+
+    @media (min-width: $desktop) {
+      grid-area: photo;
+      background-size: 100%;
+      padding-bottom: 60%;
+      background-image: url("../../public/img/any/benefits_big_2.png");
+    }
+  }
+
+  &__photo3 {
+    margin-bottom: 40px;
+    height: 267px;
+    background-size: 360px;
+    background-image: url("../../public/img/any/benefits_3.png");
+
+    @media (min-width: $desktop) {
+      grid-area: photo;
+      background-size: 100%;
+      padding-bottom: 80%;
+      background-image: url("../../public/img/any/benefits_big_3.png");
+    }
+  }
+
+  &__text {
+    padding: 0 20px;
+    text-align: center;
+
+    @media (min-width: $desktop) {
+      padding: 0 7%;
+      text-align: start;
+    }
+  }
+
+  &__text_care {
+    grid-area: text;
+    height: fit-content;
+    padding: 0;
+  }
+
+  &__text_bonus {
+    grid-area: text;
+    padding: 0;
+  }
+}

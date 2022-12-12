@@ -1,0 +1,167 @@
+@import "../utils/variables.scss";
+
+.icon {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  cursor: pointer;
+  transition: $transition;
+
+  &--instagram_white {
+    width: 48px;
+    height: 48px;
+    background-image: url("../../public/img/icons/instagram_white.svg");
+
+    &:hover {
+      background-image: url("../../public/img/icons/instagram_grey.svg");
+    }
+
+    &:active {
+      background-image: url("../../public/img/icons/instagram_light_grey.svg");
+    }
+  }
+
+  &--instagram_black {
+    background-image: url("../../public/img/icons/instagram_black.svg");
+
+    &:hover {
+      background-image: url("../../public/img/icons/instagram_grey.svg");
+    }
+
+    &:active {
+      background-image: url("../../public/img/icons/instagram_light_grey.svg");
+    }
+  }
+
+  &--facebook_white {
+    width: 48px;
+    height: 48px;
+    background-image: url("../../public/img/icons/facebook_white.svg");
+
+    &:hover {
+      background-image: url("../../public/img/icons/facebook_grey.svg");
+    }
+
+    &:active {
+      background-image: url("../../public/img/icons/facebook_light_grey.svg");
+    }
+  }
+
+  &--facebook_black {
+    background-image: url("../../public/img/icons/facebook_black.svg");
+
+    &:hover {
+      background-image: url("../../public/img/icons/facebook_grey.svg");
+    }
+
+    &:active {
+      background-image: url("../../public/img/icons/facebook_light_grey.svg");
+    }
+  }
+
+  &--telegram_white {
+    width: 48px;
+    height: 48px;
+    background-image: url("../../public/img/icons/telegram_white.svg");
+
+    &:hover {
+      background-image: url("../../public/img/icons/telegram_grey.svg");
+    }
+
+    &:active {
+      background-image: url("../../public/img/icons/telegram_light_grey.svg");
+    }
+  }
+
+  &--telegram_black {
+    background-image: url("../../public/img/icons/telegram_black.svg");
+
+    &:hover {
+      background-image: url("../../public/img/icons/telegram_grey.svg");
+    }
+
+    &:active {
+      background-image: url("../../public/img/icons/telegram_light_grey.svg");
+    }
+  }
+
+  &--telegram_big {
+    width: 40px;
+    height: 40px;
+    background-image: url("../../public/img/icons/telegram_big.svg");
+    display: none;
+
+    @media (min-width: $desktop) {
+      display: block;
+    }
+
+    &:hover {
+      background-image:  url("../../public/img/icons/telegram_big_light_grey.svg");
+    }
+
+    &:active {
+      background-image: url("../../public/img/icons/telegram_big_grey.svg");
+    }
+  }
+
+  &--menu {
+    width: 30px;
+    height: 30px;
+    background-image: url("../../public/img/icons/menu.svg");
+
+    @media (min-width: $desktop) {
+      display: none;
+    }
+
+    &:hover {
+      background-image: url("../../public/img/icons/menu_light_grey.svg");
+    }
+
+    &:active {
+      background-image: url("../../public/img/icons/menu_grey.svg");
+    }
+  }
+
+  &--phone {
+    position: relative;
+    background: transparent;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../public/img/icons/phone.svg");
+
+    @media (min-width: $desktop) {
+      width: 40px;
+      height: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    
+    }
+
+    &:hover {
+      background-image: url("../../public/img/icons/phone_light_grey.svg");
+    }
+
+    &:active {
+      background-image: url("../../public/img/icons/phone_grey.svg");
+    }
+  }
+
+  &--cross {
+    width: 32px;
+    height: 32px;
+    background-image: url("../../public/img/icons/cross.svg");
+
+    &:hover {
+      background-image: url("../../public/img/icons/cross_grey.svg");
+    }
+
+    &:active {
+      background-image: url("../../public/img/icons/cross_light_grey.svg");
+    }
+  }
+}

@@ -1,0 +1,59 @@
+@import "../styles/utils/variables.scss";
+
+.Header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 68px;
+  padding: 0 20px;
+  background-color: $darkBlue;
+
+  @media (min-width: $desktop) {
+    height: 85px;
+    padding: 0 4% 0 8%;
+  }
+
+  &__logo {
+    margin-bottom: 4px;
+
+    @media (min-width: $desktop) {
+      margin: 0 70px 6px 0;
+    }
+  }
+
+  &__menu {
+    @media (min-width: $desktop) {
+      width: 54%;
+    }
+  }
+
+  &__menu > * {
+    width: 100%;
+
+    @media (min-width: $desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 35%;
+
+    @media (min-width: $desktop) {
+      max-width: 16%;
+      margin-left: 20px;
+    }
+  }
+
+  &__phone_button {
+    position: relative;
+    background: transparent;
+    border: 0;
+  }
+}

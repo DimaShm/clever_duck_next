@@ -1,0 +1,17 @@
+@import "../utils/variables.scss";
+
+.body {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  width: 360px;
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    max-width: 1440px;
+  }
+
+  &__content {
+    width: 100%;
+  }
+}

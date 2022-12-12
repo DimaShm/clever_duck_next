@@ -1,0 +1,28 @@
+@import "./utils/variables.scss";
+@import "./utils/normalize.scss";
+@import "./blocks/page.scss";
+@import "./blocks/body.scss";
+@import "./blocks/small_text.scss";
+@import "./blocks/text.scss";
+@import "./blocks/title.scss";
+@import "./blocks/subtitle.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/icon.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/order_button.scss";
+@import "./blocks/loader.scss";
+
+.main {
+  margin: 0 auto;
+  background-color: #fff;
+  width: 360px;
+
+  @media (min-width: $desktop) {
+    width: 100%;
+    max-width: 1440px;
+  }
+
+  &__content {
+    width: 100%;
+  }
+}

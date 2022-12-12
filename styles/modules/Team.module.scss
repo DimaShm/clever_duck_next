@@ -1,0 +1,79 @@
+@import "../../styles/utils/variables.scss";
+
+.Team {
+  padding: 40px 40px;
+  width: 100%;
+  
+  @media (min-width: $desktop) {
+    padding: 50px 7%;
+  }
+
+  &__title {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @media (min-width: $desktop) {
+      text-align: start;
+      margin-bottom: 80px;
+    }
+  }
+
+  &__list {
+    display: block;
+    
+    @media (min-width: $desktop) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  &__photo {
+    width: 163px;
+    height: 163px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    margin-bottom: 40px;
+  }
+
+  &__photo1 {
+    background-image: url("../../public/img/team/person_1.png");
+  }
+
+  &__photo2 {
+    background-image: url("../../public/img/team/person_2.png");
+  }
+
+  &__photo3 {
+    background-image: url("../../public/img/team/person_3.png");
+  }
+
+  &__name {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  &__position {
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media (min-width: $desktop) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: space-between;
+    width: 210px;
+  }
+}

@@ -1,0 +1,102 @@
+@import "../../styles/utils/variables.scss";
+
+.Reviews {
+  padding: 40px 20px;
+  width: 100%;
+  
+  @media (min-width: $desktop) {
+    padding: 50px 7%;
+  }
+
+  &__title {
+    display: block;
+    text-align: center;
+    margin-bottom: 60px;
+
+    @media (min-width: $desktop) {
+      text-align: start;
+      margin-bottom: 100px;
+    }
+  }
+
+  & > * {
+    display: flex;
+    flex-direction: column;
+  
+    @media (min-width: $desktop) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  height: 558px;
+  margin-bottom: 40px;
+
+  @media (min-width: $desktop) {
+    height: 581px;
+    margin-bottom: 0;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}  
+
+.photo {
+  position: absolute;
+  top: -82px;
+  right: 80px;
+  width: 164px;
+  height: 164px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  margin-bottom: 40px;
+
+  @media (min-width: $desktop) {
+    right: 50px;
+  }
+} 
+
+.photo1 {
+  background-image: url("../../public/img/rewiews/rewiew_1.png");
+}
+
+.photo2 {
+  background-image: url("../../public/img/rewiews/rewiew_2.png");
+}
+
+.photo3 {
+  background-image: url("../../public/img/rewiews/rewiew_3.png");
+}
+
+.card_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+  height: 490px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 130px 20px 80px;
+
+  @media (min-width: $desktop) {
+    width: 380px;
+    height: 518px;
+  }
+}
+
+.quotes {
+  width: 40px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+  background-image: url("../../public/img/any/quotes.png");
+}

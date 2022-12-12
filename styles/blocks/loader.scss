@@ -1,0 +1,33 @@
+@import "../utils/variables.scss";
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: load 1.3s infinite linear;
+   
+    &--pink {
+      border: 5px solid #fff;
+      border-left-color: #ea1e80;
+    }
+
+    &--grey {
+      border: 5px solid $lightGrey;
+      border-left-color: #fff;
+    }
+  }
+}
+
+@keyframes load {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
