@@ -3,24 +3,38 @@
 .Home {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   width: 100%;
-  height: 572px;
-  background-repeat: no-repeat;
-  background-position: bottom;
   background-color: $darkBlue;
-  background-image: url("../../public/img/any/home_mobile.png");
 
   @media (min-width: $desktop) {
-    flex-direction: row;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-areas: "home__photo home__content";
+    grid-template-columns: 1fr 1fr;
+    gap: 110px;
     padding-right: 7%;
-    background-image: url("../../public/img/any/home_desktop.png");
-    background-position-x: left;
-    height: 860px;
+  }
+
+  &__photo_container {
+    grid-area: home__photo;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    padding-top: 30px;
+  }
+
+  &__photo {
+    width: 280px;
+    height: 331px;
+
+    @media (min-width: $desktop) {
+      width: 565px;
+      height: 770px;
+    }
   }
 
   &__content {
+    grid-area: home__content;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +42,7 @@
 
     @media (min-width: $desktop) {
       align-items: flex-start;
-      width: 40%;
+      padding-top: 270px;
     }
   }
 

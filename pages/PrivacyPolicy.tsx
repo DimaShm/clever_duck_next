@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
 import styles from '../styles/modules/PrivacyPolicy.module.scss';
+import Layout from './Layout';
 
 const PrivacyPolicy = () => {
 
@@ -14,15 +13,13 @@ const PrivacyPolicy = () => {
   }, []);
 
   return (
-    <>
-      <Header />
+    <Layout>
 
       <div className={styles.PrivacyPolicy}>
         <h1>Privacy policy page</h1>
       </div>
       
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

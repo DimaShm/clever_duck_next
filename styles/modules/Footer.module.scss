@@ -4,6 +4,7 @@
   display: flex;
   width: 100%;
   flex-direction: column;
+  align-items: center;
   padding: 80px 40px;
   background-color: $darkBlue;
   
@@ -12,13 +13,11 @@
   }
 
   @media (min-width: $desktop) {
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: 100px 7% 100px;
-    background-image: url("../../public/img/any/footer_bgr.svg");
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 370px;
+    display: grid;
+    grid-template-columns: 1.5fr 0.4fr 1.3fr 0.8fr;
+    gap: 85px;
+    padding: 0;
+    padding-left: 5%;
   }
 
   &__logo {
@@ -30,22 +29,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-
-    @media (min-width: $desktop) {
-      width: 260px;
-    }
-
-    &:nth-child(2) {
-      margin-left: 110px;
-      width: 200px;
-    }
-
-    &:last-child {
-
-      @media (min-width: $desktop) {
-        width: 300px;
-      }
-    }
   }
 
   &__socials {
@@ -60,21 +43,26 @@
   }
 
   &__menu {
-    opacity: 0;
-    height: 0;
-    width: 100%;
+    display: none;
 
     @media (min-width: $desktop) {
-      opacity: 1;
+      display: flex;
       flex-direction: column;
       align-items: flex-start;
-      padding-top: 40px;
-
+      padding-top: 32px;
     }
   }
 
   &__message {
     text-align: center;
     margin-bottom: 30px;
+  }
+
+  &__photo {
+    display: none;
+
+    @media (min-width: $desktop) {
+     display: block;
+    }
   }
 }

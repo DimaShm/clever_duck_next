@@ -1,8 +1,9 @@
+import Head from 'next/head';
+import Image from "next/image";
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
 import styles from '../styles/modules/Home.module.scss';
+import Layout from './Layout';
 
 const Home: React.FC = () => {
   const router = useRouter();
@@ -16,13 +17,13 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <Header />
+    <Layout>
+      <Head>
+        <meta name="keywords" content="доставка їжі для тварин" />
+        <meta name="description" content="Головна сторінка" />
+      </Head>
 
-      <div 
-        aria-label="dog photo"
-        className={styles.Home}
-      >
+      <div className={styles.Home}>
         <div className={styles.Home__content}>
           <span className={styles.Home__title}>
             Доставка їжі для тварин
@@ -39,10 +40,19 @@ const Home: React.FC = () => {
           </span>
         </button>
         </div>
+
+        <div className={styles.Home__photo_container}>
+          <Image 
+              src="/img/any/home.png"
+              alt="dog photo" 
+              width="320"
+              height="331"
+              className={styles.Home__photo}
+            />
+        </div>  
       </div>
 
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

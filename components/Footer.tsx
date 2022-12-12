@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import MainPageNav from './MainPageNav';
 import styles from '../styles/modules/Footer.module.scss';
+import Image from 'next/image';
 
 const Footer = () => {
   return(
@@ -86,6 +87,15 @@ const Footer = () => {
             </Link>
           </li>
         </ul>
+      </div>
+      <div className={styles.Footer__block}>
+        <Image
+          src="/img/any/footer.svg"
+          alt="dog photo" 
+          width="370"
+          height="440"
+          className={styles.Footer__photo}
+        />
       </div>
   </div>
   );

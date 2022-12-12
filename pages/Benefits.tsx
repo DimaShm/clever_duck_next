@@ -1,8 +1,12 @@
+import Head from "next/head";
+import Image from "next/image";
 import { useEffect } from "react";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import LinkFda from "../components/LinkFda";
 import styles from '../styles/modules/Benefits.module.scss';
+import Layout from "./Layout";
+import benefitsPhoto1 from '../public/img/any/benefits_1.png';
+import benefitsPhoto2 from '../public/img/any/benefits_2.png';
+import benefitsPhoto3 from '../public/img/any/benefits_3.png';
 
 const Benefits: React.FC = () => {
 
@@ -15,8 +19,13 @@ const Benefits: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <Header />
+    <Layout>
+
+      <Head>
+        <title>CLEVER DUCK | Переваги</title>
+        <meta name="keywords" content="вказівки FDA Iндивідуальний підхід" />
+        <meta name="description" content="Сторінка про переваги" />
+      </Head>
 
       <div className={styles.Benefits}>
       <section className={styles.Benefits__about}>
@@ -24,9 +33,11 @@ const Benefits: React.FC = () => {
           Ми дотримуємося вказівок FDA
         </h1> 
         <br />
-        <div
-          aria-label="dogs photo" 
-          className={`${styles.Benefits__photo} ${styles.Benefits__photo1}`}
+        <Image 
+          src={benefitsPhoto1} 
+          alt="dog photo" 
+          placeholder="blur"
+          className={styles.Benefits__photo1}
         />
         <p className={`text ${styles.Benefits__text}`}>
           На жаль, дослідження показують, що більшість власників собак не дотримуються <LinkFda /> щодо кормів для домашніх тварин через брак часу, зусиль чи обізнаності. Їх впровадження можуть значно зменшити випадки бактеріальних захворювань та зараження собак.
@@ -44,10 +55,17 @@ const Benefits: React.FC = () => {
           Індивідуальний підхід
         </h1> 
         <br />
-        <div
+        <Image 
+          src={benefitsPhoto2} 
+          alt="dog photo" 
+          placeholder="blur"
+          className={styles.Benefits__photo2}
+        />
+
+        {/* <div
           aria-label="dogs photo" 
           className={`${styles.Benefits__photo} ${styles.Benefits__photo2}`}
-        />
+        /> */}
         <p 
           className={`text ${styles.Benefits__text} ${styles.Benefits__text_care}`}
         >
@@ -64,10 +82,17 @@ const Benefits: React.FC = () => {
         >
           Додаткові приємності
         </h1> 
-        <div
+        <Image 
+          src={benefitsPhoto3} 
+          alt="cats photo" 
+          placeholder="blur"
+          className={styles.Benefits__photo3}
+        />
+
+        {/* <div
           aria-label="cats photo"
           className={`${styles.Benefits__photo} ${styles.Benefits__photo3}`}
-        />
+        /> */}
         <p 
           className={`text ${styles.Benefits__text} ${styles.Benefits__text_bonus}`}
         >
@@ -80,8 +105,7 @@ const Benefits: React.FC = () => {
       </section>
       </div>
       
-      <Footer />
-    </>
+    </Layout>
   );
 };
 

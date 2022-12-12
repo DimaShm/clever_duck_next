@@ -1,7 +1,7 @@
+import Head from 'next/head';
 import { useEffect } from 'react';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
 import styles from '../styles/modules/Reviews.module.scss';
+import Layout from './Layout';
 
 const Reviews: React.FC = () => {
 
@@ -14,8 +14,13 @@ const Reviews: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <Header />
+    <Layout>
+
+      <Head>
+        <title>CLEVER DUCK | Відгуки</title>
+        <meta name="keywords" content="не дорого якісно" />
+        <meta name="description" content="Відгуки" />
+      </Head>
 
       <div className={styles.Reviews}>
         <h1 className={`title ${styles.Reviews}`}>Відгуки</h1>
@@ -71,8 +76,7 @@ const Reviews: React.FC = () => {
         </div>
       </div>
 
-      <Footer />
-    </>
+    </Layout>
   );
 };
 
