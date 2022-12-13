@@ -19,10 +19,12 @@ const Layout: React.FC<Props> = ({ children }) => {
         <link rel="icon" href="/favicon.png"></link>
         <title>CLEVER DUCK</title>
       </Head>
-
-      <Header />
-      {children}
-      <Footer />
+      
+      <div className="main__content">
+        <Header />
+        {children}
+        <Footer />
+      </div>
     </>
   );
 }

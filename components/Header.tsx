@@ -6,7 +6,6 @@ import styles from '../styles/modules/Header.module.scss';
 import Image from 'next/image';
 import logo from '../public/img/any/logo.png';
 
-
 const Header = () => {
   const [phonesIsVisible, setPhonesIsVisible] = useState(false);
 

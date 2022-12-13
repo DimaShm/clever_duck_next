@@ -30,18 +30,18 @@ const Reviews: React.FC = () => {
       </Head>
 
       <div className={styles.Reviews}>
-        <h1 className={`title ${styles.Reviews}`}>Відгуки</h1>
+        <h1 className={`title ${styles.Reviews__title}`}>Відгуки</h1>
         <br /><br /><br /> <br />
         <div className={styles.Reviews__list}>
-          <div className={styles.card}>
+          <div className={styles.Reviews__card}>
             <Image 
               src={reviewPhoto1} 
               alt="фотографія людини, яка залишила відгук" 
               placeholder="blur"
-              className={styles.photo}
+              className={styles.Reviews__photo}
             />
-            <div className={styles.card_content}>
-              <div className={styles.quotes}/>
+            <div className={styles.Reviews__card_content}>
+              <div className="quotes"/>
               <span className="text text--center">
                 Дуже сподобався індивідуальний підхід до кожного улюбленця. Планую замовляти ще
               </span>
@@ -51,15 +51,15 @@ const Reviews: React.FC = () => {
             </div>
           </div>
 
-          <div className={styles.card}>
+          <div className={styles.Reviews__card}>
             <Image 
               src={reviewPhoto2} 
               alt="фотографія людини, яка залишила відгук" 
               placeholder="blur"
-              className={styles.photo}
+              className={styles.Reviews__photo}
             />
-            <div className={styles.card_content}>
-              <div className={styles.quotes}/>
+            <div className={styles.Reviews__card_content}>
+              <div className="quotes"/>
               <span className="text text--center">
                 Не дорого, якісно та швидко. Найкраща доставкка з тих, якими я користувався
               </span>
@@ -69,15 +69,15 @@ const Reviews: React.FC = () => {
             </div>
           </div>
 
-          <div className={styles.card}>
+          <div className={styles.Reviews__card}>
             <Image 
               src={reviewPhoto3} 
               alt="фотографія людини, яка залишила відгук" 
               placeholder="blur"
-              className={styles.photo}
+              className={styles.Reviews__photo}
             />
-            <div className={styles.card_content}>
-              <div className={styles.quotes}/>
+            <div className={styles.Reviews__card_content}>
+              <div className="quotes"/>
               <span className="text text--center">
                 Я купую тут корм більше ніж 8 місяців поспіль і мене ще жодного разу не підвели. Раджу!
               </span>
