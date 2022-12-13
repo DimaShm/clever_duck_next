@@ -19,7 +19,11 @@ const Tariffs = () => {
 
       <Head>
         <title>CLEVER DUCK | Тарифи</title>
-        <meta name="keywords" content="Ранковий Стандартний Найпопулярніший Все включено" />
+        <meta 
+          name="keywords" 
+          content="Замовити тиждень два тижні Ранковий Стандартний Найпопулярніший Все включено Привозимо у будь-який час Кладемо їстівний подарунок
+          Ви самі обираєте бренди Корм Привозимо навіть у вихідні Кладемо іграшку" 
+        />
         <meta name="description" content="Тарифи" />
       </Head>
 
@@ -147,7 +151,7 @@ const Tariffs = () => {
             <span 
               className={`small_text small_text--white ${styles.Tariffs__text}`}
             >
-              Тиждень
+              Два тижні
             </span>
           </div>
 
@@ -202,7 +206,7 @@ const Tariffs = () => {
             <span 
               className={`small_text small_text--grey ${styles.Tariffs__text}`}
             >
-              Тиждень
+              Два тижні
             </span>
           </div>
 

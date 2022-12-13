@@ -3,6 +3,9 @@ import { useState } from 'react';
 import MainPageNav from './MainPageNav';
 import PopupMenu from './PopupMenu';
 import styles from '../styles/modules/Header.module.scss';
+import Image from 'next/image';
+import logo from '../public/img/any/logo.png';
+
 
 const Header = () => {
   const [phonesIsVisible, setPhonesIsVisible] = useState(false);
@@ -15,18 +18,28 @@ const Header = () => {
 
   return (
     <div className={styles.Header}>
-      <Link href={'/'}>
-        <div 
-          aria-label="logo"
-          role="button"
-          className="logo Header__logo"
-        >
-          <div className="logo__img logo__img--header" />
-          <span className="logo__title logo__title--header">CLEVER DUCK</span>
-        </div>
-     </Link>
+      <Link href={'/'}
+        aria-label="логотип CLEVER DUCK"
+        role="button"
+        className="logo Header__logo"
+      >
+        <Image 
+          src={logo} 
+          alt="логотип CLEVER DUCK"
+          placeholder="blur"
+          className="logo__img_header"
+        />
+        
+        <span className="logo__title logo__title--header">
+          CLEVER DUCK
+        </span>
+      </Link>
       
-      <div className={styles.Header__menu} data-cy="header">
+      <div 
+        aria-label="панель навігації"
+        className={styles.Header__menu} 
+        data-cy="header"
+      >
         <MainPageNav 
           style={''}
         />
@@ -34,21 +47,19 @@ const Header = () => {
       
       <div className={styles.Header__contacts}>
         <a
-          aria-label="telegram" 
-          role="button"
           href="https://telegram.com" 
           target="_blank" 
           rel="noreferrer"
         >
           <div
-            aria-label="telegram"
+            aria-label="Перехід на нашу сторінку в telegram" 
             role="button"
             className="icon icon--telegram_big" 
           />
         </a>
 
         <button 
-          aria-label="phone"
+          aria-label="Відкрити меню з номерами телефонів"
           type="button"
           className="icon icon--phone"
           onClick={handlerPhoneButtonClick}
@@ -62,7 +73,7 @@ const Header = () => {
           href={'/MobileMenu'} 
         >
           <div 
-            aria-label="menu"
+            aria-label="Відкрити навігацію"
             role="button"
             className="icon icon--menu"
            />

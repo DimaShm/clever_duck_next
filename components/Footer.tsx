@@ -2,38 +2,49 @@ import Link from 'next/link';
 import MainPageNav from './MainPageNav';
 import styles from '../styles/modules/Footer.module.scss';
 import Image from 'next/image';
+import logo from '../public/img/any/logo.png';
+import footerPhoto from '../public/img/any/footer.png';
 
 const Footer = () => {
   return(
     <div className={styles.Footer}>
       <div className={styles.Footer__block}>
-        <Link href={'/'}>
-          <div 
-            aria-label="logo"
-            role="button"
-            className={`logo ${styles.Footer__logo}`}
-          >
-            <div className="logo__img logo__img--footer" />
-            <span className="logo__title">CLEVER DUCK</span>
-          </div>
+        <Link href={'/'}
+          aria-label="логотип CLEVER DUCK"
+          role="button"
+          className="logo"
+        >
+          <Image 
+            src={logo} 
+            alt="логотип CLEVER DUCK"
+            placeholder="blur"
+            className="logo__img_footer"
+          />
+          
+          <span className="logo__title logo__title--footer">
+            CLEVER DUCK
+          </span>
         </Link>
         <p className={`small_text small_text--white ${styles.Footer__message}`}>
           Здоров’я вашого <br /> вихованця в ваших руках
         </p>
         <div className={styles.Footer__socials}>
           <a 
+            aria-label="Наша сторінка инстаграм"
             href="https://www.instagram.com"
             target="_blank"
             className="icon icon--instagram_white"
             rel="noreferrer"
           />
           <a 
+            aria-label="Наша сторінка телеграм"
             href="https://telegram.com" 
             target="_blank"
             className="icon icon--telegram_white"
             rel="noreferrer"
           />
           <a 
+            aria-label="Наша сторінка фейсбук"
             href="https://www.facebook.com"
             target="_blank"
             className="icon icon--facebook_white"
@@ -41,18 +52,25 @@ const Footer = () => {
           />
         </div>
       </div>
+
       <div className={styles.Footer__block}>
-        <div className={styles.Footer__menu}>
+        <div
+          aria-label="панель навігації" 
+          className={styles.Footer__menu}
+        >
           <MainPageNav 
             style={''}
           />
         </div>
       </div>
       <div className={styles.Footer__block}>
-        <ul className="menu menu--contacts">
+        <ul 
+          aria-label="контакти" 
+          className="menu menu--contacts"
+        >
           <li className="menu__item">
             <a 
-              aria-label="telephone number"
+              aria-label="Позвонити по телефону +380654220173"
               href="tel:+380654220173"
               className="small_text small_text--light_grey menu__link"
             >
@@ -61,7 +79,7 @@ const Footer = () => {
           </li>
           <li className="menu__item">
             <a
-              aria-label="telephone number" 
+              aria-label="Позвонити по телефону +380966550112"
               href="tel:+380966550112"
               className="small_text small_text--light_grey menu__link"
             >
@@ -70,7 +88,7 @@ const Footer = () => {
           </li>
           <li className="menu__item">
             <a 
-              aria-label="email"
+              aria-label="Написати листа на пошту: mailto:Petcare@hello.com"
               href="mailto:Petcare@hello.com"
               className="small_text small_text--light_grey menu__link"
             >
@@ -79,7 +97,7 @@ const Footer = () => {
           </li>
           <li className="menu__item">
             <Link
-              aria-label="privacy policy"
+              aria-label="Перейти на страницю политика конфіденційності"
               href={'/PrivacyPolicy'}
               className="small_text small_text--light_grey menu__link"
             >
@@ -89,11 +107,10 @@ const Footer = () => {
         </ul>
       </div>
       <div className={styles.Footer__block}>
-        <Image
-          src="/img/any/footer.svg"
-          alt="dog photo" 
-          width="370"
-          height="440"
+        <Image 
+          src={footerPhoto} 
+          alt="Фотографія собаки породи чихуа-хуа" 
+          placeholder="blur"
           className={styles.Footer__photo}
         />
       </div>

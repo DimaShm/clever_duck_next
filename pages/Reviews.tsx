@@ -2,6 +2,10 @@ import Head from 'next/head';
 import { useEffect } from 'react';
 import styles from '../styles/modules/Reviews.module.scss';
 import Layout from './Layout';
+import Image from 'next/image';
+import reviewPhoto1 from '../public/img/reviews/review_1.png';
+import reviewPhoto2 from '../public/img/reviews/review_2.png';
+import reviewPhoto3 from '../public/img/reviews/review_3.png';
 
 const Reviews: React.FC = () => {
 
@@ -18,7 +22,10 @@ const Reviews: React.FC = () => {
 
       <Head>
         <title>CLEVER DUCK | Відгуки</title>
-        <meta name="keywords" content="не дорого якісно" />
+        <meta 
+          name="keywords" 
+          content="відгуки не дорого якісно найкраща доставка сподобався купую не підвели" 
+        />
         <meta name="description" content="Відгуки" />
       </Head>
 
@@ -27,9 +34,11 @@ const Reviews: React.FC = () => {
         <br /><br /><br /> <br />
         <div className={styles.Reviews__list}>
           <div className={styles.card}>
-            <div 
-              className={`${styles.photo} ${styles.photo1}`}
-              aria-label="user photo"
+            <Image 
+              src={reviewPhoto1} 
+              alt="фотографія людини, яка залишила відгук" 
+              placeholder="blur"
+              className={styles.photo}
             />
             <div className={styles.card_content}>
               <div className={styles.quotes}/>
@@ -43,12 +52,14 @@ const Reviews: React.FC = () => {
           </div>
 
           <div className={styles.card}>
-            <div 
-              className={`${styles.photo} ${styles.photo2}`}
-              aria-label="user photo"
+            <Image 
+              src={reviewPhoto2} 
+              alt="фотографія людини, яка залишила відгук" 
+              placeholder="blur"
+              className={styles.photo}
             />
             <div className={styles.card_content}>
-            <div className={styles.quotes}/>
+              <div className={styles.quotes}/>
               <span className="text text--center">
                 Не дорого, якісно та швидко. Найкраща доставкка з тих, якими я користувався
               </span>
@@ -59,12 +70,14 @@ const Reviews: React.FC = () => {
           </div>
 
           <div className={styles.card}>
-            <div 
-              className={`${styles.photo} ${styles.photo3}`}
-              aria-label="user photo"
+            <Image 
+              src={reviewPhoto3} 
+              alt="фотографія людини, яка залишила відгук" 
+              placeholder="blur"
+              className={styles.photo}
             />
             <div className={styles.card_content}>
-            <div className={styles.quotes}/>
+              <div className={styles.quotes}/>
               <span className="text text--center">
                 Я купую тут корм більше ніж 8 місяців поспіль і мене ще жодного разу не підвели. Раджу!
               </span>

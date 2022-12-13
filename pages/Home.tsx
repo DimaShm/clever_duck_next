@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import styles from '../styles/modules/Home.module.scss';
 import Layout from './Layout';
+import homePhoto from '../public/img/any/home.png';
 
 const Home: React.FC = () => {
   const router = useRouter();
@@ -19,7 +20,10 @@ const Home: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <meta name="keywords" content="доставка їжі для тварин" />
+        <meta 
+          name="keywords" 
+          content="Доставка їжі для тварин Зробити замовлення" 
+        />
         <meta name="description" content="Головна сторінка" />
       </Head>
 
@@ -30,7 +34,7 @@ const Home: React.FC = () => {
           </span>
 
           <button
-            aria-label="main button"
+            aria-label="Кнопка для переходу к замовленню"
             type="button"
             className={styles.Home__button}
             onClick={() => router.push('/Tariffs')}
@@ -43,11 +47,10 @@ const Home: React.FC = () => {
 
         <div className={styles.Home__photo_container}>
           <Image 
-              src="/img/any/home.png"
-              alt="dog photo" 
-              width="320"
-              height="331"
-              className={styles.Home__photo}
+            src={homePhoto} 
+            alt="Фотографія собаки мисливської породи" 
+            placeholder="blur"
+            className={styles.Home__photo}
             />
         </div>  
       </div>

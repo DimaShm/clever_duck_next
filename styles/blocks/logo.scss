@@ -14,28 +14,25 @@
     font-weight: 900;
   }
 
-  &__img {
-    background-image: url("../../public/img/any/logo.svg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
+  &__img_header {
+    width: 48px;
+    height: 33px;
+    margin: 0 auto;
 
-    &--header {
-      width: 48px;
-      height: 33px;
+    @media (min-width: $desktop) {
+      width: 71px;
+      height: 48px;
       margin-bottom: 6px;
     }
+  } 
 
-    &--footer {
-      width: 101px;
-      height: 68px;
-      margin-bottom: 8px;
-    }
+  &__img_footer {
+    width: 101px;
+    height: 68px;
+    margin-bottom: 8px;
   }
 
   &__title {
-    font-size: 16px;
-    line-height: 19px;
     font-weight: 800;
     color: #fff;
     transition: $transition;
@@ -43,6 +40,12 @@
     &--header {
       font-size: 10px;
       line-height: 12px;
+    }
+
+    &--footer {
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 20px;
     }
   }
 }

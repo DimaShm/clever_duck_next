@@ -21,7 +21,7 @@ const OrderButton: React.FC<Props> = ({ buttonColor, loaderColor }) => {
 
   return (
     <button
-      aria-label="order"
+      aria-label="замовити"
       type="button"
       className={`order_button order_button${buttonColor}`}
       onClick={haydlerOrderButtonClick}

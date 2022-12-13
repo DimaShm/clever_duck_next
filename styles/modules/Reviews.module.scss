@@ -53,27 +53,12 @@
   right: 80px;
   width: 164px;
   height: 164px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
   margin-bottom: 40px;
 
   @media (min-width: $desktop) {
     right: 50px;
   }
 } 
-
-.photo1 {
-  background-image: url("../../public/img/rewiews/rewiew_1.png");
-}
-
-.photo2 {
-  background-image: url("../../public/img/rewiews/rewiew_2.png");
-}
-
-.photo3 {
-  background-image: url("../../public/img/rewiews/rewiew_3.png");
-}
 
 .card_content {
   display: flex;

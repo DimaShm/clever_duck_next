@@ -23,6 +23,7 @@ const MainPageNav: React.FC<Props> = ({ style }) => {
           className={`menu__item menu__item${style}`}
         >
           <Link
+            aria-label={`перейти на сторінку ${link.name}`}
             href={link.path}
             className={(classNames(
               'small_text',

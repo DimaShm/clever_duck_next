@@ -9,4 +9,6 @@ To install dependencies: npm i.
 
 To run the project locally: npm run dev.
 
-To create the prodaction project: npm run build.
+To create the prodaction version: npm run build.
+
+To deploy project: use https://vercel.com/

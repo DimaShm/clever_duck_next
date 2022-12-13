@@ -7,7 +7,10 @@ const MobileMenu = () => {
   return (
     <>
     <Head>
-      <meta name="keywords" content="Меню, Переваги, Тарифи, Відгуки, Команда" />
+      <meta 
+        name="keywords" 
+        content="Меню, Переваги, Тарифи, Відгуки, Команда" 
+      />
       <meta name="description" content="Меню" />
       <link rel="icon" href="/favicon.png"></link>
       <title>CLEVER DUCK</title>

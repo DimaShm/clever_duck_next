@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useEffect } from 'react';
 import styles from '../styles/modules/PrivacyPolicy.module.scss';
 import Layout from './Layout';
@@ -15,7 +16,15 @@ const PrivacyPolicy = () => {
   return (
     <Layout>
 
-      <div className={styles.PrivacyPolicy}>
+    <Head>
+      <meta name="keywords" content="політика конфіденційності" />
+      <meta name="description" content="Сторінка політика конфіденційності" />
+    </Head>
+
+      <div
+        aria-label="політика конфіденційності"
+        className={styles.PrivacyPolicy}
+      >
         <h1>Privacy policy page</h1>
       </div>
       

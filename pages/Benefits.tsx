@@ -23,7 +23,10 @@ const Benefits: React.FC = () => {
 
       <Head>
         <title>CLEVER DUCK | Переваги</title>
-        <meta name="keywords" content="вказівки FDA Iндивідуальний підхід" />
+        <meta 
+          name="keywords" 
+          content="вказівки FDA Iндивідуальний підхід компанія дотримується норм грамування та калорійності їжі для тваринок, фасуючи тільки потрібну кількість корму та наповнювача для вашого вихованця. Для отримання консультації дзвоніть завжди уточнюємо зручний час доставки." 
+        />
         <meta name="description" content="Сторінка про переваги" />
       </Head>
 
@@ -35,7 +38,7 @@ const Benefits: React.FC = () => {
         <br />
         <Image 
           src={benefitsPhoto1} 
-          alt="dog photo" 
+          alt="іотографія собаки породи лабрадор" 
           placeholder="blur"
           className={styles.Benefits__photo1}
         />
@@ -57,15 +60,10 @@ const Benefits: React.FC = () => {
         <br />
         <Image 
           src={benefitsPhoto2} 
-          alt="dog photo" 
+          alt="фотографія собаки породи рассел-терьер" 
           placeholder="blur"
           className={styles.Benefits__photo2}
         />
-
-        {/* <div
-          aria-label="dogs photo" 
-          className={`${styles.Benefits__photo} ${styles.Benefits__photo2}`}
-        /> */}
         <p 
           className={`text ${styles.Benefits__text} ${styles.Benefits__text_care}`}
         >
@@ -84,15 +82,10 @@ const Benefits: React.FC = () => {
         </h1> 
         <Image 
           src={benefitsPhoto3} 
-          alt="cats photo" 
+          alt="фотографія кішки" 
           placeholder="blur"
           className={styles.Benefits__photo3}
         />
-
-        {/* <div
-          aria-label="cats photo"
-          className={`${styles.Benefits__photo} ${styles.Benefits__photo3}`}
-        /> */}
         <p 
           className={`text ${styles.Benefits__text} ${styles.Benefits__text_bonus}`}
         >
