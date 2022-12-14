@@ -35,7 +35,6 @@ const Header = () => {
       </Link>
       
       <div 
-        aria-label="панель навігації"
         className={styles.Header__menu} 
         data-cy="header"
       >
@@ -47,11 +46,11 @@ const Header = () => {
       <div className={styles.Header__contacts}>
         <a
           href="https://telegram.com" 
+          aria-label="Перехід на нашу сторінку в telegram" 
           target="_blank" 
           rel="noreferrer"
         >
           <div
-            aria-label="Перехід на нашу сторінку в telegram" 
             role="button"
             className="icon icon--telegram_big" 
           />
