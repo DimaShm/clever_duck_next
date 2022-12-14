@@ -15,7 +15,7 @@
   @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: 1fr 0.5fr 1fr 1fr;
-    gap: 60px;
+    gap: 4%;
     padding: 0;
     padding-left: 5%;
   }
@@ -61,7 +61,7 @@
     @media (min-width: $desktop) {
      display: block;
      width: 100%;
-     height: 440px;
+     height: 100%;
     }
   }
 }
