@@ -17,8 +17,9 @@ const Header = () => {
 
   return (
     <div className={styles.Header}>
-      <Link href={'/'}
+      <Link 
         aria-label="логотип CLEVER DUCK"
+        href={'/'}
         role="button"
         className="logo Header__logo"
       >
@@ -45,8 +46,8 @@ const Header = () => {
       
       <div className={styles.Header__contacts}>
         <a
-          href="https://telegram.com" 
           aria-label="Перехід на нашу сторінку в telegram" 
+          href="https://telegram.com" 
           target="_blank" 
           rel="noreferrer"
         >
@@ -68,10 +69,10 @@ const Header = () => {
         </button>  
 
         <Link 
+          aria-label="Відкрити навігацію"
           href={'/MobileMenu'} 
         >
           <div 
-            aria-label="Відкрити навігацію"
             role="button"
             className="icon icon--menu"
            />
