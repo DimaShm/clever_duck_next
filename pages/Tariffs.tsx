@@ -134,7 +134,6 @@ const Tariffs = () => {
           <div className={styles.Tariffs__item}>
             <OrderButton 
               buttonColor="--pink"
-              loaderColor="--grey"
             />
           </div>
         </div>
@@ -193,7 +192,6 @@ const Tariffs = () => {
           <div className={styles.Tariffs__item}>
             <OrderButton 
               buttonColor="--grey"
-              loaderColor="--pink"
             />
           </div>
         </div>
@@ -248,7 +246,6 @@ const Tariffs = () => {
           <div className={styles.Tariffs__item}>
             <OrderButton 
               buttonColor="--pink"
-              loaderColor="--grey"
             />
           </div>
         </div>

@@ -18,7 +18,7 @@ const Team = () => {
   }, []);
 
   return (
-    <Layout>
+    <Layout headerColor="">
 
       <Head>
         <title>CLEVER DUCK | Наша команда</title>

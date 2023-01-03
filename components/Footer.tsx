@@ -60,6 +60,7 @@ const Footer = () => {
         >
           <MainPageNav 
             style={''}
+            color={''}
           />
         </div>
       </div>
