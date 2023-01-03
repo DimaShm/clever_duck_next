@@ -8,7 +8,7 @@
   align-items: center;
   width: 100%;
   height: 68px;
-  padding: 0 20px;
+  padding: 0 20px 0 30px;
   background-color: $darkBlue;
 
   @media (min-width: $desktop) {
@@ -41,13 +41,19 @@
 
   &__contacts {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 35%;
+    width: 30%;
 
     @media (min-width: $desktop) {
-      max-width: 16%;
-      margin-left: 20px;
+      width: 20%;
+    }
+  }
+
+  &__contacts_item {
+    margin-right: 20%;
+
+    &:last-child {
+      margin-left: -20%;
+      margin-right: -20%;
     }
   }
 

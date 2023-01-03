@@ -31,6 +31,12 @@
     &--mobile {
       padding: 40px 0;
     }
+
+    &--profile {
+      @media (min-width: $desktop) {
+        display: none;
+      }
+    }  
   }  
   
   &__link {
@@ -54,6 +60,24 @@
 
     &--active {
       color: #fff;
+      font-weight: 500;
+    }
+  }
+
+  &__link_white {
+    color: #0b0b0b;
+
+    &:hover {
+      color: #666;
+    }
+
+    &:active {
+      color: #0b0b0b;
+      font-weight: 500;
+    }
+
+    &--active {
+      color: #0b0b0b;
       font-weight: 500;
     }
   }

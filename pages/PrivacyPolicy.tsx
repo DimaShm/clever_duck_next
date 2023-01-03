@@ -14,7 +14,7 @@ const PrivacyPolicy = () => {
   }, []);
 
   return (
-    <Layout>
+    <Layout headerColor="">
 
     <Head>
       <meta name="keywords" content="політика конфіденційності" />

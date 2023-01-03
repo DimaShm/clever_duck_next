@@ -4,9 +4,10 @@ import Header from "../components/Header";
 
 type Props = {
   children: React.ReactNode;
+  headerColor: string;
 }
 
-const Layout: React.FC<Props> = ({ children }) => {
+const Layout: React.FC<Props> = ({ children, headerColor }) => {
   return (
     <>
       <Head>
@@ -22,7 +23,7 @@ const Layout: React.FC<Props> = ({ children }) => {
       </Head>
       
       <div className="main__content">
-        <Header />
+        <Header color={headerColor || 'black'}/>
         {children}
         <Footer />
       </div>

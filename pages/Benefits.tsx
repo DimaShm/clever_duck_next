@@ -19,7 +19,7 @@ const Benefits: React.FC = () => {
   }, []);
 
   return (
-    <Layout>
+    <Layout headerColor="">
 
       <Head>
         <title>CLEVER DUCK | Переваги</title>

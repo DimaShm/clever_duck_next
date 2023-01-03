@@ -18,7 +18,7 @@ const Reviews: React.FC = () => {
   }, []);
 
   return (
-    <Layout>
+    <Layout headerColor="">
 
       <Head>
         <title>CLEVER DUCK | Відгуки</title>

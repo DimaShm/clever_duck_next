@@ -9,17 +9,9 @@
     border-radius: 50%;
     width: 60px;
     height: 60px;
+    border: 5px solid $lightGrey;
+    border-left-color: #fff;
     animation: load 1.3s infinite linear;
-   
-    &--pink {
-      border: 5px solid #fff;
-      border-left-color: #ea1e80;
-    }
-
-    &--grey {
-      border: 5px solid $lightGrey;
-      border-left-color: #fff;
-    }
   }
 }
 

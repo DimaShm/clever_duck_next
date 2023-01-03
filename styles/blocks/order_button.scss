@@ -42,6 +42,7 @@
 
     &:disabled {
       background-color: $darkGrey;
+      cursor: no-drop;
     }
   }
 

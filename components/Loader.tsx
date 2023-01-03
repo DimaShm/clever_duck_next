@@ -1,9 +1,4 @@
-
-type Props = {
-  color: string;
-};
-
-const Loader: React.FC<Props> = ({ color }) => {
+const Loader = () => {
 
   return (
     <div
@@ -11,7 +6,7 @@ const Loader: React.FC<Props> = ({ color }) => {
       className="loader"
     >
       <div 
-        className={`loader__content loader__content${color}`} 
+        className="loader__content"
       />
     </div>
   );

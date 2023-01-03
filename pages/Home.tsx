@@ -18,7 +18,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <Layout>
+    <Layout headerColor="">
       <Head>
         <meta 
           name="keywords" 

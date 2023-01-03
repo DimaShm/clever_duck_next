@@ -65,6 +65,7 @@
   &--telegram_white {
     width: 48px;
     height: 48px;
+
     background-image: url("../../public/img/icons/telegram_white.svg");
 
     &:hover {
@@ -89,65 +90,134 @@
   }
 
   &--telegram_big {
-    width: 40px;
-    height: 40px;
-    background-image: url("../../public/img/icons/telegram_big.svg");
+    width: 30px;
+    height: 30px;
     display: none;
 
     @media (min-width: $desktop) {
       display: block;
+      width: 40px;
+      height: 40px;
     }
+  }
+
+  &--telegram_big_white {
+    background-image: url("../../public/img/icons/telegram_big_white.svg");
 
     &:hover {
-      background-image:  url("../../public/img/icons/telegram_big_light_grey.svg");
+      background-image:  url("../../public/img/icons/telegram_big_white_hover.svg");
     }
 
     &:active {
-      background-image: url("../../public/img/icons/telegram_big_grey.svg");
+      background-image: url("../../public/img/icons/telegram_big_white_active.svg");
+    }
+
+  }
+
+  &--telegram_big_black {
+    background-image: url("../../public/img/icons/telegram_big_black.svg");
+
+    &:hover {
+      background-image:  url("../../public/img/icons/telegram_big_black_hover.svg");
+    }
+
+    &:active {
+      background-image: url("../../public/img/icons/telegram_big_black_active.svg");
     }
   }
 
   &--menu {
     width: 30px;
     height: 30px;
-    background-image: url("../../public/img/icons/menu.svg");
 
     @media (min-width: $desktop) {
       display: none;
     }
+  }
+
+  &--menu_white {
+    background-image: url("../../public/img/icons/menu_white.svg");
 
     &:hover {
-      background-image: url("../../public/img/icons/menu_light_grey.svg");
+      background-image: url("../../public/img/icons/menu_white_hover.svg");
     }
 
     &:active {
-      background-image: url("../../public/img/icons/menu_grey.svg");
+      background-image: url("../../public/img/icons/menu_white_active.svg");
+    }
+  }
+
+  &--menu_black {
+    background-image: url("../../public/img/icons/menu_black.svg");
+
+    &:hover {
+      background-image: url("../../public/img/icons/menu_black_hover.svg");
+    }
+
+    &:active {
+      background-image: url("../../public/img/icons/menu_black_active.svg");
     }
   }
 
   &--phone {
     position: relative;
     background: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
     border: 0;
     width: 30px;
     height: 30px;
-    background-image: url("../../public/img/icons/phone.svg");
 
     @media (min-width: $desktop) {
-      width: 40px;
+      min-width: 40px;
       height: 40px;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: 100%;
-    
     }
+  }
 
+  &--phone_white {
+    background-image: url("../../public/img/icons/phone_white.svg");
+  
     &:hover {
-      background-image: url("../../public/img/icons/phone_light_grey.svg");
+      background-image: url("../../public/img/icons/phone_white_hover.svg");
     }
 
     &:active {
-      background-image: url("../../public/img/icons/phone_grey.svg");
+      background-image: url("../../public/img/icons/phone_white_active.svg");
+    }
+  }
+
+  &--phone_black {
+    background-image: url("../../public/img/icons/phone_black.svg");
+
+    &:hover {
+      background-image: url("../../public/img/icons/phone_black_hover.svg");
+    }
+
+    &:active {
+      background-image: url("../../public/img/icons/phone_black_active.svg");
+    }
+  }
+
+  &--profile {
+    width: 40px;
+    height: 40px;
+    display: none;
+
+    @media (min-width: $desktop) {
+      display: block;
+    }
+  }
+
+  &--profile_black {
+    background-image: url("../../public/img/icons/profile_black.svg");
+
+    &:hover {
+      background-image: url("../../public/img/icons/profile_black_hover.svg");
+    }
+
+    &:active {
+      background-image: url("../../public/img/icons/profile_black_active.svg");
     }
   }
 
@@ -163,5 +233,9 @@
     &:active {
       background-image: url("../../public/img/icons/cross_light_grey.svg");
     }
+  }
+
+  &--toogle_btn {
+    background-image: url("../../public/img/icons/toogle_btn.svg");
   }
 }

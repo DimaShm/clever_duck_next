@@ -5,15 +5,6 @@
   flex-direction: column;
   align-items: center;
 
-  &:hover > * {
-    color:  #eee;
-  }
-
-  &:active > * {
-    color: #fff;
-    font-weight: 900;
-  }
-
   &__img_header {
     width: 48px;
     height: 33px;
@@ -42,10 +33,30 @@
       line-height: 12px;
     }
 
+    &--white {
+      color: #0b0b0b;
+    }
+
     &--footer {
       font-size: 16px;
       line-height: 19px;
       margin-bottom: 20px;
     }
+  }
+
+  &:hover &__title {
+    color:  #eee;
+  }
+
+  &:active &__title {
+    color: #fff;
+  }
+
+  &:hover &__title--white {
+    color: #666;
+  }
+
+  &:active &__title--white {
+    color: #0b0b0b;
   }
 }

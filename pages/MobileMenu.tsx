@@ -34,6 +34,7 @@ const MobileMenu = () => {
       <div className={styles.MobileMenu__content}>
         <MainPageNav 
           style={'--mobile'}
+          color={''}
         />
       </div>
     </div>

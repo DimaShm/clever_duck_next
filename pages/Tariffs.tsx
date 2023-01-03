@@ -15,7 +15,7 @@ const Tariffs = () => {
   }, []);
 
   return (
-    <Layout>
+    <Layout headerColor="">
 
       <Head>
         <title>CLEVER DUCK | Тарифи</title>
@@ -80,7 +80,6 @@ const Tariffs = () => {
           <div className={styles.Tariffs__item}>
             <OrderButton 
               buttonColor="--pink"
-              loaderColor="--grey"
             />
           </div>
         </div>

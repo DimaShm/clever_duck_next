@@ -5,8 +5,13 @@ import PopupMenu from './PopupMenu';
 import styles from '../styles/modules/Header.module.scss';
 import Image from 'next/image';
 import logo from '../public/img/any/logo.png';
+import logoWhite from '../public/img/any/logo_white.svg';
 
-const Header = () => {
+type Props = {
+  color: string;
+}
+
+const Header: React.FC<Props> = ({ color }) => {
   const [phonesIsVisible, setPhonesIsVisible] = useState(false);
 
   const handlerPhoneButtonClick = () => {
@@ -16,21 +21,23 @@ const Header = () => {
   };
 
   return (
-    <div className={styles.Header}>
+    <div 
+      className={styles.Header} 
+      style={color === 'white' ? {backgroundColor: `${color}`} : {}}
+    >
       <Link 
         aria-label="логотип CLEVER DUCK"
         href={'/'}
         role="button"
-        className="logo Header__logo"
+        className={`logo Header__logo Header__logo--${color}`}
       >
         <Image 
-          src={logo} 
+          src={color ? logoWhite : logo} 
           alt="логотип CLEVER DUCK"
-          placeholder="blur"
           className="logo__img_header"
         />
         
-        <span className="logo__title logo__title--header">
+        <span className={`logo__title logo__title--header logo__title--${color}`}>
           CLEVER DUCK
         </span>
       </Link>
@@ -41,6 +48,7 @@ const Header = () => {
       >
         <MainPageNav 
           style={''}
+          color={color}
         />
       </div>
       
@@ -50,17 +58,20 @@ const Header = () => {
           href="https://telegram.com" 
           target="_blank" 
           rel="noreferrer"
+          className={styles.Header__contacts_item}
         >
           <div
             role="button"
-            className="icon icon--telegram_big" 
+            className={`icon icon--telegram_big icon--telegram_big_${color}`}
           />
         </a>
 
         <button 
           aria-label="Відкрити меню з номерами телефонів"
           type="button"
-          className="icon icon--phone"
+          className={
+            `icon icon--phone icon--phone_${color} ${styles.Header__contacts_item}`
+          }
           onClick={handlerPhoneButtonClick}
         >
           {phonesIsVisible &&
@@ -71,11 +82,23 @@ const Header = () => {
         <Link 
           aria-label="Відкрити навігацію"
           href={'/MobileMenu'} 
+          className={styles.Header__contacts_item}
         >
           <div 
             role="button"
-            className="icon icon--menu"
-           />
+            className={`icon icon--menu icon--menu_${color}`}
+          />  
+        </Link>
+
+        <Link 
+          aria-label="Мій профіль"
+          href={'/Profile'} 
+          className={styles.Header__contacts_item}
+        >
+          <div 
+            role="button"
+            className={`icon icon--profile icon--profile_${color}`}
+          />  
         </Link>
       </div>
     </div>
