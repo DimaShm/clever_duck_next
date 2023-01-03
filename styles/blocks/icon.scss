@@ -221,6 +221,18 @@
     }
   }
 
+  &--profile_white {
+    background-image: url("../../public/img/icons/profile_white.svg");
+
+    &:hover {
+      background-image: url("../../public/img/icons/profile_white_hover.svg");
+    }
+
+    &:active {
+      background-image: url("../../public/img/icons/profile_white_active.svg");
+    }
+  }
+
   &--cross {
     width: 32px;
     height: 32px;
