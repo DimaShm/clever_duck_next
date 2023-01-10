@@ -5,7 +5,7 @@ const LinkFda = () => (
     target="_blank"
     rel="noreferrer"
   >
-    <span className="text text--grey">
+    <span className="text text--grey text--fda">
       вказівок FDA
     </span>
   </a>

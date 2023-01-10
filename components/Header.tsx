@@ -92,7 +92,7 @@ const Header: React.FC<Props> = ({ color }) => {
 
         <Link 
           aria-label="Мій профіль"
-          href={'/Profile'} 
+          href={'/CheckProfile'} 
           className={styles.Header__contacts_item}
         >
           <div 

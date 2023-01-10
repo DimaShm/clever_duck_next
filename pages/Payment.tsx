@@ -6,37 +6,40 @@ import Image from 'next/image';
 import map from '../public/img/any/map.png';
 import { useRouter } from 'next/router';
 import Loader from '../components/Loader';
-
-const tariffs = ['Ранковий', 'Стандартний', 'Найпопулярніший', 'Все включено'];
+import { tariffs } from '../data/tariffs';
 
 const Payment: React.FC = () => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
   const [name, setName] = useState('');
-  const [adress, setAdress] = useState('');
+  const [address, setAddress] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [tariff, setTariff] = useState(tariffs[1]);
   const [formNotFilled, setFormNotFilled] = useState(true);
   const [isTariffsVisivle, setIsTariffsVisible] = useState(false);
+  const [tariff, setTariff] = useState('');
+  let currentTariff: string = '';
 
   useEffect(() => {
     if (window !== undefined) {
       window.scrollTo({
         top: 0, left: 0, behavior: 'smooth',
-      })
+      });
+      currentTariff = localStorage.getItem('currentTariff') || 'Популярний';
+      setTariff(currentTariff);
     }
   }, []);
 
   useEffect(() => {
-    if (name !== '' && adress !== '' && phoneNumber !== '' ) {
+    if (name !== '' && address !== '' && phoneNumber !== '' ) {
       setFormNotFilled(false);
       return;
     } 
     setFormNotFilled(true);
-  }, [name, adress, phoneNumber]);
+  }, [name, address, phoneNumber]);
 
   const handlerTariffsItemClick = (tariffsName: string) => {
     setTariff(tariffsName);
+    localStorage.setItem('currentTariff', JSON.stringify(tariffsName));
     setIsTariffsVisible(false);
   }
 
@@ -46,6 +49,7 @@ const Payment: React.FC = () => {
     setIsLoading(true);
     setTimeout(() => {
       setIsLoading(false);
+      localStorage.setItem('currentTariff', JSON.stringify(currentTariff));
       router.push('/');
     }, 1000);  
   }
@@ -89,31 +93,31 @@ const Payment: React.FC = () => {
 
           <input
             aria-label="напишить, будь ласка, свою адресу"
-            name="adress"
+            name="address"
             type="text"
-            value={adress}
+            value={address}
             className={styles.Payment__item}
             placeholder="Адреса"
             required
             title={
-              adress === '' 
+              address === '' 
                ? 'напишить, будь ласка, свою адресу'
                : ''
             }
-            onChange={(e) => setAdress(e.currentTarget.value)}
+            onChange={(e) => setAddress(e.currentTarget.value)}
           />
 
           <input 
-            aria-label="напишить, будь ласка, свій телефон"
-            name="phoneNumber"
+            aria-label="напишить, будь ласка, свій телефон у форматі +38**********"
+            name="phone"
             type="tel"
             value={phoneNumber}
             className={styles.Payment__item}
             placeholder="Номер телефону"
             required
             title={
-              adress === '' 
-               ? 'напишить, будь ласка, свій телефон'
+              address === '' 
+               ? 'напишить, будь ласка, свій телефон у форматі +38**********'
                : ''
             }
             onChange={(e) => setPhoneNumber(e.currentTarget.value)}
@@ -127,7 +131,7 @@ const Payment: React.FC = () => {
               aria-label="оберіть, будь ласка, свій тариф"
               type="text"
               name="tariff"
-              value={`${tariff} тариф`}
+              value={tariff}
               className={
                 `${styles.Payment__item} ${styles.Payment__current_tariff}`
               }
@@ -142,11 +146,11 @@ const Payment: React.FC = () => {
               >
                 {tariffs.map(item =>
                   <li 
-                    key={item}
+                    key={item.id}
                     className={`text ${styles.Payment__tariffs_item}`}
-                    onClick={() => handlerTariffsItemClick(item)}
+                    onClick={() => handlerTariffsItemClick(item.name)}
                   >
-                    {`${item} тариф`}
+                    {item.name}
                   </li>
                 )}
               </ul>

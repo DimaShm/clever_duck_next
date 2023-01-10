@@ -247,6 +247,18 @@
     }
   }
 
+  &--cart {
+    background-image: url("../../public/img/icons/cart.svg");
+
+    &:hover {
+      background-image: url("../../public/img/icons/cart_grey.svg");
+    }
+
+    &:active {
+      background-image: url("../../public/img/icons/cart_light_grey.svg");
+    }
+  }
+
   &--toogle_btn {
     background-image: url("../../public/img/icons/toogle_btn.svg");
   }

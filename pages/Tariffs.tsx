@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import OrderButton from '../components/OrderButton';
 import styles from '../styles/modules/Tariffs.module.scss';
 import Layout from './Layout';
+import { tariffs } from '../data/tariffs';
 
 const Tariffs = () => {
 
@@ -32,10 +33,10 @@ const Tariffs = () => {
 
         <div className={styles.Tariffs__card}>
           <div className={styles.Tariffs__item}>
-            <span className={styles.Tariffs__name}>Ранковий</span>
-            <div className={styles.Tariffs__price}>700 ₴</div>
+            <span className={styles.Tariffs__name}>{tariffs[0].name}</span>
+            <div className={styles.Tariffs__price}>{`${tariffs[0].price} ₴`}</div>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Тиждень
             </span>
@@ -43,17 +44,17 @@ const Tariffs = () => {
 
           <div className={styles.Tariffs__item}>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Привозимо з 06 до 11:30
             </span>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Кладемо їстівний подарунок
             </span>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Ви самі обираєте бренди
             </span>
@@ -61,17 +62,17 @@ const Tariffs = () => {
 
           <div className={styles.Tariffs__item}>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Корм на 1250кк/день
             </span>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Привозимо навіть у вихідні
             </span>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Кладемо іграшку
             </span>
@@ -80,16 +81,17 @@ const Tariffs = () => {
           <div className={styles.Tariffs__item}>
             <OrderButton 
               buttonColor="--pink"
+              currentTariff={tariffs[0].name}
             />
           </div>
         </div>
 
         <div className={styles.Tariffs__card}>
           <div className={styles.Tariffs__item}>
-            <span className={styles.Tariffs__name}>Стандартний</span>
-            <div className={styles.Tariffs__price}>1250 ₴</div>
+            <span className={styles.Tariffs__name}>{tariffs[1].name}</span>
+            <div className={styles.Tariffs__price}>{`${tariffs[1].price} ₴`}</div>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Тиждень
             </span>
@@ -97,17 +99,17 @@ const Tariffs = () => {
 
           <div className={styles.Tariffs__item}>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Привозимо з 10 до 18
             </span>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Кладемо їстівний подарунок
             </span>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Ви самі обираєте бренди
             </span>
@@ -115,17 +117,17 @@ const Tariffs = () => {
 
           <div className={styles.Tariffs__item}>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Корм на 1450кк/день
             </span>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Привозимо навіть у вихідні
             </span>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Кладемо іграшку
             </span>
@@ -134,6 +136,7 @@ const Tariffs = () => {
           <div className={styles.Tariffs__item}>
             <OrderButton 
               buttonColor="--pink"
+              currentTariff={tariffs[1].name}
             />
           </div>
         </div>
@@ -141,10 +144,10 @@ const Tariffs = () => {
         <div className={`${styles.Tariffs__card} ${styles.pink}`}>
           <div className={styles.Tariffs__item}>
             <span className={`${styles.Tariffs__name} ${styles.white}`}>
-              Найпопулярніший
+              {tariffs[2].name}
             </span>
             <div className={`${styles.Tariffs__price} ${styles.white}`}>
-              2000 ₴
+              {`${tariffs[2].price} ₴`}
             </div>
             <span 
               className={`small_text small_text--white ${styles.Tariffs__text}`}
@@ -192,16 +195,17 @@ const Tariffs = () => {
           <div className={styles.Tariffs__item}>
             <OrderButton 
               buttonColor="--grey"
+              currentTariff={tariffs[2].name}
             />
           </div>
         </div>
 
         <div className={styles.Tariffs__card}>
           <div className={styles.Tariffs__item}>
-            <span className={styles.Tariffs__name}>Все включено</span>
-            <div className={styles.Tariffs__price}>2500 ₴</div>
+            <span className={styles.Tariffs__name}>{tariffs[3].name}</span>
+            <div className={styles.Tariffs__price}>{`${tariffs[3].price} ₴`}</div>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Два тижні
             </span>
@@ -209,17 +213,17 @@ const Tariffs = () => {
 
           <div className={styles.Tariffs__item}>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Привозимо у будь-який час
             </span>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Кладемо їстівний подарунок
             </span>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Ви самі обираєте бренди
             </span>
@@ -227,17 +231,17 @@ const Tariffs = () => {
 
           <div className={styles.Tariffs__item}>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Корм на 1700кк/день
             </span>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Привозимо навіть у вихідні
             </span>
             <span 
-              className={`small_text small_text--grey ${styles.Tariffs__text}`}
+              className={`small_text small_text--dark_grey ${styles.Tariffs__text}`}
             >
               Кладемо три іграшки
             </span>
@@ -246,6 +250,7 @@ const Tariffs = () => {
           <div className={styles.Tariffs__item}>
             <OrderButton 
               buttonColor="--pink"
+              currentTariff={tariffs[3].name}
             />
           </div>
         </div>
